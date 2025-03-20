@@ -2,7 +2,7 @@ import { Outlet } from "react-router";
 
 export function AuthLayout() {
   return (
-    <div className="grid grid-cols-2 min-h-screen bg-background">
+    <div className="grid grid-cols-2 min-h-screen bg-background max-w-7xl m-auto">
       <div className="flex flex-col h-full p-10">
         <img className="w-64 object-contain" src="/logo.svg" />
 

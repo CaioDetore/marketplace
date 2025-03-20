@@ -38,3 +38,7 @@
   --color-danger: #DC3545;
   --color-success: #28A745;
 }
+
+body {
+  background-color: var(--color-background);
+}

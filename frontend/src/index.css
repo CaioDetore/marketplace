@@ -1,6 +1,20 @@
 @import "tailwindcss";
 
 @theme {
+  --text-title-lg: 1.75rem;
+  --text-title-md: 1.5rem;
+  --text-title-sm: 1.125rem;
+  
+  --text-body-md: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-body-xs: 0.75rem;
+
+  --text-label-md: 0.75rem;
+  --text-label-sm: 0.625rem;
+
+  --text-action-md: 1rem;
+  --text-action-sm: 0.875rem;
+
   --font-poppins: "Poppins", sans-serif;
   --font-sans: "DM Sans", sans-serif;
 
@@ -22,5 +36,5 @@
   --color-gray-500: #1D1D1D;
 
   --color-danger: #DC3545;
-  --color-danger: #28A745;
+  --color-success: #28A745;
 }

@@ -1,4 +1,6 @@
-import { InputRoot } from "../../components/input";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { InputField, InputIcon, InputRoot } from "../../components/input";
+import { Mail02Icon } from "@hugeicons/core-free-icons";
 
 export function SignIn() {
   return (
@@ -8,7 +10,13 @@ export function SignIn() {
         <span className="mt-2 font-poppins text-gray-300">Informe seu e-mail e senha para entrar</span>
 
         <div>
-          <InputRoot />
+          <InputRoot>
+            <InputIcon>
+              <HugeiconsIcon icon={Mail02Icon} />
+            </InputIcon>
+
+            <InputField placeholder="" />
+          </InputRoot>
         </div>
       </div>
     </form>

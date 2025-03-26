@@ -6,6 +6,7 @@ import {
   Mail02Icon,
 } from "@hugeicons/core-free-icons";
 import { Button } from "../../components/button";
+import { Link } from "react-router";
 
 export function SignIn() {
   return (
@@ -46,10 +47,12 @@ export function SignIn() {
 
       <div>
         <span className="mb-5 block text-gray-300 text-body-md">Ainda não tem uma conta?</span>
-        <Button variant="outlined">
-          Cadastrar
-          <HugeiconsIcon icon={ArrowRight02Icon} />
-        </Button>
+        <Link to="/sign-up">
+          <Button variant="outlined" type="button">
+            Cadastrar
+            <HugeiconsIcon icon={ArrowRight02Icon} />
+          </Button>
+        </Link>
       </div>
     </form>
   );

@@ -1,4 +1,4 @@
-import { Outlet, useLocation } from "react-router";
+import { Link, Outlet, useLocation } from "react-router";
 import { MenuButton } from "../../components/menu-button";
 import { Button } from "../../components/button";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -17,17 +17,23 @@ export function AppLayout() {
         <img src="/logo-icons.svg" alt="" className="h-10 w-14" />
 
         <div className="flex gap-2">
-          <MenuButton
-            pageTitle="Dashboard"
-            variant={location.pathname === "/" ? "selected" : "default"}
-            icon={ChartHistogramIcon}
-          />
+          <Link to="/">
+            <MenuButton
+              pageTitle="Dashboard"
+              variant={location.pathname === "/" ? "selected" : "default"}
+              icon={ChartHistogramIcon}
+            />
+          </Link>
 
-          <MenuButton
-            pageTitle="Produtos"
-            variant={location.pathname === "/produtos" ? "selected" : "default"}
-            icon={PackageIcon}
-          />
+          <Link to="/products">
+            <MenuButton
+              pageTitle="Produtos"
+              variant={
+                location.pathname === "/products" ? "selected" : "default"
+              }
+              icon={PackageIcon}
+            />
+          </Link>
         </div>
 
         <div className="flex gap-4 items-center">
@@ -36,11 +42,17 @@ export function AppLayout() {
             Novo Produto
           </Button>
 
-          <img src="https://github.com/CaioDetore.png" alt="" className="size-12 rounded-xl" />
+          <img
+            src="https://github.com/CaioDetore.png"
+            alt=""
+            className="size-12 rounded-xl"
+          />
         </div>
-        </header>
+      </header>
 
-      <Outlet />
+      <main className="max-w-[1030px] mx-auto py-16">
+        <Outlet />
+      </main>
     </div>
   );
 }

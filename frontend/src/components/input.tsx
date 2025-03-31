@@ -65,7 +65,7 @@ export function InputField({type, password, ...props }: InputFieldProps) {
       <input
         placeholder="Placeholder"
         type={isPasswordVisible ? "password" : type}
-        className="flex-1 p-2 pl-8 border-b-2 caret-orange-base border-gray-100 outline-0 focus-within:border-gray-400 group-[&:not(:has(input:placeholder-shown))]:border-gray-400"
+        className="flex-1 text-body-sm text-gray-200 p-2 pl-8 border-b-2 caret-orange-base border-gray-100 outline-0 focus-within:border-gray-400 group-[&:not(:has(input:placeholder-shown))]:border-gray-400 group-[&:not(:has(input:placeholder-shown))]:text-gray-500"
         {...props}
       />
     </>

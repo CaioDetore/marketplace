@@ -50,7 +50,7 @@ export function AppLayout() {
         </div>
       </header>
 
-      <main className="max-w-[1030px] mx-auto py-16">
+      <main className="max-w-[1030px] mx-auto p-5 py-16">
         <Outlet />
       </main>
     </div>

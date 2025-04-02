@@ -1,7 +1,11 @@
 import { HugeiconsIcon } from "@hugeicons/react";
 import { InputField, InputIcon, InputRoot } from "../../../components/input";
 import { Search01Icon } from "@hugeicons/core-free-icons";
-import { SelectIcon, SelectInput, SelectRoot } from "../../../components/select";
+import {
+  SelectIcon,
+  SelectInput,
+  SelectRoot,
+} from "../../../components/select";
 import { Button } from "../../../components/button";
 
 export function Products() {
@@ -38,12 +42,41 @@ export function Products() {
             </SelectRoot>
           </div>
 
-          <Button className="h-14 justify-center">
-            Aplicar filtro
-          </Button>
+          <Button className="h-14 justify-center">Aplicar filtro</Button>
         </div>
 
-        <div className="bg-white flex flex-col gap-7 flex-1 rounded-2xl p-6"></div>
+        <div className="flex-1 grid grid-cols-2 gap-4">
+          <div className="w-full bg-white rounded-3xl p-1">
+            <img
+              src=""
+              className="w-full object-cover h-36 rounded-3xl"
+              alt=""
+            />
+
+            <div className="p-3 flex flex-col gap-2">
+              <div className="flex items-center justify-between">
+                <h1 className="text-subtitle font-semibold">Sofá</h1>
+                
+                <span className="text-title-sm font-bold">
+                  <small className="text-label-md text-gray-500">
+                    R$
+                  </small>
+                  {(1200.90).toLocaleString('pt-BR', {
+                    style: 'currency',
+                    currency: 'BRL'
+                  }).replace('R$', '')}
+                </span>
+              </div>
+
+              <p className="line-clamp- text-body-sm text-gray-300">
+                Sofá revestido em couro legítimo, com estrutura em madeira
+                maciça e pés em metal cromado.
+              </p>
+            </div>
+          </div>
+
+          <div className="w-full bg-white rounded-3xl">a</div>
+        </div>
       </div>
     </div>
   );

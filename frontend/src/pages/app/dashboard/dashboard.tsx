@@ -1,6 +1,6 @@
-import { SaleTag02Icon } from "@hugeicons/core-free-icons";
-import { HugeiconsIcon } from "@hugeicons/react";
+import { SaleTag02Icon, Store02Icon, UserMultiple02Icon } from "@hugeicons/core-free-icons";
 import { GuestsChart } from "./guestsChart";
+import MetricCard from "./metricCard";
 
 export function Dashboard() {
   return (
@@ -12,22 +12,9 @@ export function Dashboard() {
 
       <div className="flex gap-6 w-full mt-10">
         <div className="flex flex-col gap-4 w-60">
-          <div className="flex h-28 gap-4 bg-white p-3 rounded-2xl">
-            <div className="w-20 bg-blue-light items-center justify-center flex rounded-xl">
-              <HugeiconsIcon
-                className="text-blue-dark size-10"
-                icon={SaleTag02Icon}
-              />
-            </div>
-
-            <div className="max-w-20 gap-2 flex flex-col">
-              <h1 className="text-title-lg font-bold">24</h1>
-              <span className="text-body-xs text-gray-300">Produtos Vendidos</span>
-            </div>
-          </div>
-
-          <div className="bg-white">a</div>
-          <div className="bg-white">a</div>
+          <MetricCard description="Produtos vendidos" icon={SaleTag02Icon} value={24} />
+          <MetricCard description="Produtos anunciados" icon={Store02Icon} value={56} />
+          <MetricCard description="Pessoas visitantes" icon={UserMultiple02Icon} value={1.238} />
         </div>
 
         <GuestsChart />
